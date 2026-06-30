@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ESP32 Bad Apple - Web Flasher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f1115;
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  .card {
+    background: #1a1d24;
+    border: 1px solid #2a2e38;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 480px;
+    width: 100%;
+  }
+  h1 { font-size: 1.4rem; margin-bottom: 8px; }
+  p { color: #a0a4ad; line-height: 1.5; }
+  esp-web-install-button {
+    --esp-tools-button-color: #4f7cff;
+    margin-top: 20px;
+  }
+  .browser-note {
+    margin-top: 18px;
+    font-size: 0.85rem;
+    color: #707684;
+  }
+  .browser-note b { color: #c2c5cc; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>🍎 ESP32 Bad Apple</h1>
+    <p>Connect your ESP32 over USB, click below, and flash the firmware + video data (SPIFFS) directly from your browser. No software install needed.</p>
+
+    <esp-web-install-button manifest="manifest.json">
+      <button slot="activate">Connect &amp; Flash</button>
+      <span slot="unsupported">Your browser doesn't support Web Serial. Use Chrome or Edge on desktop.</span>
+      <span slot="not-allowed">Web Serial requires HTTPS (or localhost).</span>
+    </esp-web-install-button>
+
+    <p class="browser-note">
+      Works in <b>Chrome</b> or <b>Edge</b> on Windows/macOS/Linux (desktop only — mobile browsers don't support Web Serial). Page must be served over <b>HTTPS</b> or <b>localhost</b>.
+    </p>
+  </div>
+</body>
+</html>
