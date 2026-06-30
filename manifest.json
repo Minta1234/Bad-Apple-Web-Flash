@@ -5,10 +5,10 @@
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "https://minta1234.kawinphopkodsombat.workers.dev/firmware/v1/bootloader.bin", "offset": 4096 },
-        { "path": "https://minta1234.kawinphopkodsombat.workers.dev/firmware/v1/partitions.bin", "offset": 32768 },
-        { "path": "https://minta1234.kawinphopkodsombat.workers.dev/firmware/v1/firmware.bin", "offset": 65536 },
-        { "path": "https://minta1234.kawinphopkodsombat.workers.dev/firmware/v1/spiffs.bin", "offset": 2686976 }
+        { "path": "/firmware/v1/bootloader.bin", "offset": 4096 },
+        { "path": "/firmware/v1/partitions.bin", "offset": 32768 },
+        { "path": "/firmware/v1/firmware.bin", "offset": 65536 },
+        { "path": "/firmware/v1/spiffs.bin", "offset": 2686976 }
       ]
     }
   ]
